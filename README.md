@@ -1,5 +1,3 @@
-# PIB-VS_WS2020_Gruppe6
-
 # ZEITMANAGEMENTSYSTEM - ZMS
 
 Bei diesem Projekt handelt es sich um ein verteiltes Kalendersystem für Unternehmen und Arbeitsgruppen.
