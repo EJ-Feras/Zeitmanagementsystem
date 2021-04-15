@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="todaysEventsRoot" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: #fff;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="de.htwsaar.pib.vs.zms.client.controller.homecontroller.TodaysEventsController">
+   <children>
+      <AnchorPane prefHeight="32.0" prefWidth="187.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="todayLabel" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutY="3.6000003814697266" prefHeight="30.0" prefWidth="138.0" style="-fx-background-radius: 5; -fx-font-family: &quot;SF UI Text Bold&quot;; -fx-text-fill: black;" text="Heute" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <StackPane fx:id="calendarIconContainer" layoutX="-72.0" layoutY="-61.0" prefHeight="32.0" prefWidth="38.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="195.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" style="-fx-background: #fff; -fx-background-radius: 5; -fx-border-radius: 5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <content>
+            <VBox fx:id="todayEventsCardsContainer" />
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

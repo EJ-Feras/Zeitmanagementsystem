@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import jfxtras.scene.layout.HBox?>
+
+<AnchorPane fx:id="invitableUserEntry" prefHeight="67.0" prefWidth="350.0" style="-fx-background-color: #FFF; -fx-border-radius: 10px; -fx-background-radius: 10px;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="de.htwsaar.pib.vs.zms.client.controller.eventcontroller.InvitableUserEntryController">
+   <effect>
+      <DropShadow blurType="ONE_PASS_BOX" height="9.0" offsetY="1.0" radius="4.0" width="9.0" />
+   </effect>
+   <children>
+      <HBox alignment="CENTER" layoutX="175.0" layoutY="13.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="userDetails" alignment="CENTER" contentDisplay="CENTER" style="-fx-font-family: &quot;SF UI Text Regular&quot;;" text="User" textAlignment="CENTER" textFill="#9d9d9d" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" spacing="5.0">
+         <children>
+            <Label fx:id="userStatus" alignment="CENTER" contentDisplay="CENTER" style="-fx-font-family: &quot;SF UI Text Regular&quot;;" text="userStatus" textAlignment="CENTER" textFill="#343434">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+      <JFXCheckBox fx:id="checkBox" ellipsisString=" " graphicTextGap="0.0" layoutX="304.0" layoutY="8.0" onAction="#check" text=" " unCheckedColor="BLACK" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="0.0" />
+   </children>
+</AnchorPane>

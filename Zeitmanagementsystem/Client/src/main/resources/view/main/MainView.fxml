@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="mainRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1290.0" style="-fx-background-color: #F1F1F1;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.htwsaar.pib.vs.zms.client.controller.mainviewcontroller.MainViewController">
+   <children>
+      <AnchorPane fx:id="mainContainer" prefHeight="900.0" prefWidth="1206.0">
+         <children>
+            <AnchorPane fx:id="notificationPane" layoutX="10.0" layoutY="10.0" prefHeight="319.0" prefWidth="238.0" style="-fx-background-color: #fff; -fx-background-radius: 5px;" visible="false" AnchorPane.rightAnchor="215.0" AnchorPane.topAnchor="60.0">
+               <children>
+                  <AnchorPane layoutX="37.0" layoutY="39.0" prefHeight="32.0" prefWidth="187.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutY="3.6000003814697266" prefHeight="30.0" prefWidth="138.0" style="-fx-background-radius: 5; -fx-font-family: &quot;SF UI Text Bold&quot;; -fx-text-fill: black;" text="Benachrichtigungen" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <StackPane fx:id="notificationsArrowContainer" alignment="TOP_CENTER" prefHeight="32.0" prefWidth="38.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="-16.0" />
+                  <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" style="-fx-background: #fff; -fx-background-radius: 5; -fx-border-radius: 5;" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                     <content>
+                        <VBox fx:id="notificationsScrollContainer" />
+                     </content>
+                  </ScrollPane>
+                  <AnchorPane layoutY="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="280.0">
+                     <children>
+                        <Label fx:id="showAllLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="91.0" layoutY="1.0" onMouseClicked="#goToNotifications" onMouseEntered="#addLabelEffect" onMouseExited="#removeLabelEffect" text="alle anzeigen" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="settingsPane" prefHeight="122.0" prefWidth="238.0" style="-fx-background-color: #fff; -fx-background-radius: 5px;" visible="false" AnchorPane.rightAnchor="175.0" AnchorPane.topAnchor="60.0">
+               <children>
+                  <VBox AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <AnchorPane prefHeight="32.0" prefWidth="187.0" style="-fx-border-color: #F4F4F4;">
+                           <children>
+                              <HBox layoutX="1.0" layoutY="1.0" spacing="2.0" AnchorPane.bottomAnchor="20.6" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <StackPane fx:id="loggedInStatusIconContainer" prefHeight="30.0" prefWidth="38.0">
+                                       <opaqueInsets>
+                                          <Insets bottom="3.0" />
+                                       </opaqueInsets>
+                                       <padding>
+                                          <Insets bottom="2.0" />
+                                       </padding>
+                                    </StackPane>
+                                    <JFXTextField fx:id="usernameField" editable="false" focusColor="#405aa800" style="-fx-font-family: &quot;SF UI Text Bold&quot;; -fx-text-fill: black;" text="Benutzername" unFocusColor="#4d4d4d00">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                 </children>
+                              </HBox>
+                              <AnchorPane AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="32.0">
+                                 <children>
+                                    <Label fx:id="roleField" alignment="BOTTOM_LEFT" graphicTextGap="0.0" layoutY="6.400000095367432" style="-fx-background-radius: 5; -fx-font-family: &quot;SF UI Text Regular&quot;; -fx-text-fill: black;" text="als  Super user angemeldet" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane style="-fx-border-color: #F4F4F4; -fx-border-width: 0 0 1 0;">
+                           <children>
+                              <JFXButton alignment="CENTER" contentDisplay="CENTER" onAction="#goToSettings" style="-fx-font-family: &quot;SF UI Text Bold&quot;; -fx-text-fill: black;" text="Einstellungen" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane>
+                           <children>
+                              <JFXButton fx:id="logOutBtn" alignment="CENTER" contentDisplay="CENTER" onAction="#logOut" style="-fx-font-family: &quot;SF UI Text Bold&quot;; -fx-text-fill: black;" text="Abmelden" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+                  <StackPane fx:id="settingsArrowContainer" prefHeight="32.0" prefWidth="38.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="-16.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="toolsPane" maxHeight="-Infinity" prefHeight="54.0" style="-fx-background-color: #fff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <JFXComboBox fx:id="navigationComboBox" focusColor="#405aa800" layoutX="31.0" layoutY="7.0" onAction="#navigate" promptText="Home" unFocusColor="#4d4d4d00" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="31.0" AnchorPane.topAnchor="0.0">
+                     <padding>
+                        <Insets right="20.0" />
+                     </padding>
+                  </JFXComboBox>
+                  <Line endX="-100.0" endY="35.79998016357422" layoutX="1141.0" layoutY="9.0" opacity="0.13" startX="-100.0" startY="-1.6000232696533203" AnchorPane.rightAnchor="160.0" />
+                  <StackPane fx:id="settingsIconContainer" layoutX="981.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="180.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <JFXButton fx:id="settingsButton" contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" onAction="#showSettings" text=" " />
+                     </children>
+                  </StackPane>
+                  <AnchorPane fx:id="notificationsContainer" layoutX="960.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <StackPane fx:id="notificationsIconContainer" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <JFXButton fx:id="notificationButton" contentDisplay="CENTER" graphicTextGap="0.0" onAction="#showNotifications" text=" " />
+                           </children>
+                        </StackPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="refreshContainer" layoutX="970.0" layoutY="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="260.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <StackPane AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <JFXButton fx:id="refreshBtn" contentDisplay="CENTER" graphicTextGap="0.0" onAction="#refreshView" text="Aktualisieren" />
+                           </children>
+                        </StackPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="clockContainer" layoutX="1054.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+
+</StackPane>

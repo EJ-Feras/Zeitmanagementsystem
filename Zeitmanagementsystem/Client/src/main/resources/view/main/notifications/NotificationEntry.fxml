@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import jfxtras.scene.layout.HBox?>
+
+<AnchorPane prefHeight="95.0" prefWidth="240.0" style="-fx-border-color: #F4F4F4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.htwsaar.pib.vs.zms.client.controller.mainviewcontroller.notificationcontroller.NotificationEntryController">
+   <children>
+      <HBox alignment="CENTER" spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefWidth="238.0">
+               <children>
+                  <HBox alignment="CENTER" layoutX="103.0" prefHeight="70.0" prefWidth="235.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane>
+                           <children>
+                              <TextArea fx:id="notificationText" editable="false" prefHeight="68.0" prefWidth="239.0" style="-fx-background-color: white;" text="Du hast eine Benachrichtigung von Max Mustermann erhalten" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+                  <HBox layoutY="45.599998474121094" prefHeight="25.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" minWidth="-Infinity" prefHeight="32.0" prefWidth="113.0">
+                           <children>
+                              <Label fx:id="elapsedTime" style="-fx-font-family: &quot;SF UI Text Regular&quot;; -fx-text-fill: #686868;" />
+                           </children>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="133.0" spacing="5.0">
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                           <children>
+                              <StackPane fx:id="eyeIconContainer" onMouseClicked="#show" />
+                              <StackPane fx:id="checkMarkIconContainer" onMouseClicked="#accept" />
+                              <StackPane fx:id="rejectIconContainer" onMouseClicked="#reject" />
+                              <StackPane fx:id="trashIconContainer" onMouseClicked="#delete" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

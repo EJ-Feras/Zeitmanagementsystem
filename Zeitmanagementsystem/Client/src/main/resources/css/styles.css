@@ -1,0 +1,312 @@
+@font-face {
+	src: url("SFUIText-Bold.ttf");
+}
+
+@font-face {
+	src: url("SFUIText-Regular.ttf");
+}
+
+.root {
+	/* A bright blue for highlighting/accenting objects.  For example: selected
+     * text; selected items in menus, lists, trees, and tables; progress bars;
+     * default buttons.
+     */
+	-fx-accent: #FA2C56;
+	/* A bright blue for the focus indicator of objects. Typically used as the
+     * first color in -fx-background-color for the "focused" pseudo-class. Also
+     * typically used with insets of -1.4 to provide a glowing effect.
+     *
+     * TODO: should this be derived from -fx-accent?
+     */
+	-fx-focus-color: #FA2C56;
+}
+
+.wave {
+	-fx-background-image: url('../img/pinkWave.png');
+}
+
+.jfx-date-picker .jfx-text-field {
+	-jfx-unfocus-color: #9d9d9d;
+	-fx-prompt-text-fill: rgb(157, 157, 157, 0.7);
+}
+
+.jfx-time-picker .jfx-text-field {
+	-jfx-unfocus-color: #9d9d9d;
+	-fx-prompt-text-fill: rgb(157, 157, 157, 0.7);
+}
+
+.jfx-textarea-picker .jfx-text-field {
+	-jfx-unfocus-color: #9d9d9d;
+	-fx-prompt-text-fill: rgb(157, 157, 157, 0.7);
+}
+
+.scroll-pane>.viewport {
+	-fx-background-color: transparent;
+}
+
+.scroll-pane {
+	-fx-background-color: transparent;
+}
+
+/*TextArea*/
+.text-area {
+	-fx-background-color: #fff;
+}
+
+.text-area .scroll-pane {
+	-fx-background-color: transparent;
+}
+
+.text-area .scroll-pane .viewport {
+	-fx-background-color: transparent;
+}
+
+.text-area .scroll-pane .content {
+	-fx-background-color: transparent;
+}
+
+.text-area .scroll-bar:vertical {
+	-fx-pref-width: 1;
+	-fx-opacity: 0;
+}
+
+.text-area .scroll-bar:horizontal {
+	-fx-pref-height: 1;
+	-fx-opacity: 0;
+}
+
+.popover>.border {
+	-fx-stroke-width: 1;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Scroll Bar			                                                       *
+ *                                                                             *
+ ******************************************************************************/
+.scroll-bar {
+	-fx-background-color: transparent;
+	-fx-background-radius: 2.0em;
+}
+
+.scroll-bar:vertical>.track-background, .scroll-bar:horizontal>.track-background
+	{
+	-fx-background-color: transparent;
+	-fx-background-insets: 0.0;
+}
+
+.scroll-bar:vertical>.thumb, .scroll-bar:horizontal>.thumb {
+	-fx-background-color: transparent;
+	-fx-background-insets: 0.0;
+	-fx-background-radius: 1.0;
+}
+
+.scroll-bar:horizontal .thumb:hover, .scroll-bar:vertical .thumb:hover {
+	-fx-background-color: rgb(231.0, 231.0, 231.0);
+}
+
+/* Up- and Down-Button Padding */
+.scroll-bar:vertical>.increment-button, .scroll-bar:vertical>.decrement-button
+	{
+	-fx-padding: 5.0 2.0 5.0 2.0;
+}
+
+/* Left- and Right-Button Padding */
+.scroll-bar:horizontal>.increment-button, .scroll-bar:horizontal>.decrement-button
+	{
+	-fx-padding: 2.0 5.0 2.0 5.0;
+}
+
+.scroll-bar>.increment-button, .scroll-bar>.decrement-button,
+	.scroll-bar:hover>.increment-button, .scroll-bar:hover>.decrement-button
+	{
+	-fx-background-color: transparent;
+}
+
+.scroll-bar>.increment-button>.increment-arrow, .scroll-bar>.decrement-button>.decrement-arrow
+	{
+	-fx-background-color: rgb(150.0, 150.0, 150.0);
+}
+
+/* Up Arrow */
+.scroll-bar:vertical>.increment-button>.increment-arrow {
+	-fx-shape: "M298 426h428l-214 214z";
+}
+
+/* Down Arrow */
+.scroll-bar:vertical>.decrement-button>.decrement-arrow {
+	-fx-shape: "M298 598l214-214 214 214h-428z";
+}
+
+/* Right Arrow */
+.scroll-bar:horizontal>.increment-button>.increment-arrow {
+	-fx-shape: "M0 428l0 -428l214 214l-214 214z";
+}
+
+/* Left Arrow */
+.scroll-bar:horizontal>.decrement-button>.decrement-arrow {
+	-fx-shape: "M214 0l0 428l-214 -214l214 -214z";
+}
+
+/**************************** */
+.table-view .column-header, .table-view .column-header .filler,
+	.table-view .column-header-background .filler {
+	-fx-background-color: transparent;
+	-fx-background-radius: 20px;
+	-fx-background-insets: 0 11px 0 0;
+	-fx-padding: 0 0 5px 0;
+	-fx-height: 50px;
+	-fx-font-family: "SF UI Text Regular";
+}
+
+.table-view {
+	-fx-background-color: transparent;
+	-fx-border-radius: 15 15 0 0;
+	-fx-background-radius: 15 15 0 0
+}
+
+.table-view .column-header .label {
+	-fx-font-size: 16px;
+	-fx-text-fill: #470210;
+	-fx-font-family: "SF UI Text Regular";
+}
+
+.table-view .column-header-background {
+	-fx-background-color: transparent;
+}
+
+.table-row-cell {
+	-fx-background-color: transparent;
+	-fx-border-radius: 15;
+	-fx-background-radius: 15;
+}
+
+.table-row-cell:odd {
+	-fx-background-color: #F1F1F1;
+}
+
+.table-cell {
+	-fx-background-color: transparent;
+}
+
+.table-view .table-column {
+	-fx-alignment: CENTER;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+	-fx-background-color: -fx-box-border, #FA2C56;
+	-fx-background-insets: 0, 1 1 1 1 0;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected:hover {
+	-fx-background-color: #FA2C56;
+	-fx-background-insets: 0, 1 1 1 1 0;
+}
+
+.table-view:row-selection .table-row-cell:filled:hover {
+	-fx-background-color: #FA2C56;
+	-fx-background-insets: 0, 1 1 1 1 0;
+}
+
+.table-view:focused .table-row-cell:filled:selected {
+	-fx-background-color: #FA2C56;
+	-fx-background-insets: 0, 1 1 1 1 0;
+}
+
+.table-row-cell:empty {
+	-fx-background-color: white;
+	-fx-background-insets: 0;
+	-fx-padding: 0;
+}
+
+.table-row-cell:empty .table-cell {
+	-fx-border-width: 0px;
+}
+
+.table-view .virtual-flow .scroll-bar:vertical, .table-view .virtual-flow .scroll-bar:vertical .track,
+	.table-view .virtual-flow .scroll-bar:vertical .track-background,
+	.table-view .virtual-flow .scroll-bar:horizontal, .table-view .virtual-flow .scroll-bar:horizontal .track,
+	.table-view .virtual-flow .scroll-bar:horizontal .track-background {
+	-fx-background-color: transparent;
+}
+
+.table-view .virtual-flow .scroll-bar .increment-button, .table-view .virtual-flow .scroll-bar .decrement-button
+	{
+	-fx-opacity: 0;
+	-fx-padding: 2;
+}
+
+.table-view .virtual-flow .scroll-bar:vertical .thumb {
+	-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944);
+}
+
+.table-view .virtual-flow .scroll-bar:horizontal .thumb {
+	-fx-background-color: linear-gradient(to right, #1dbbdd44, #93f9b944);
+}
+
+
+.dialog-pane{
+  -fx-border-color:#899B7B;
+  -fx-border-width:0px;
+ }
+
+/**Costumization of The Bar where the buttons are located**/
+
+
+.dialog-pane > .content.label {
+   -fx-padding: 0.5em 0.5em 0.5em 0.5em;
+   -fx-background-color: transparent;
+   -fx-font-size:15.0px;
+}
+
+/**Costumization of DialogPane Header**/
+.dialog-pane:header .header-panel {
+  -fx-background-color: #899B7B;
+}
+
+.dialog-pane:header .header-panel .label{
+  -fx-background-color: yellow;
+  -fx-background-radius:10px;
+  -fx-text-fill:black;
+  -fx-font-size:15.0px;
+}
+
+
+/**Costumization of Buttons**/
+.dialog-pane #yes {
+   -fx-background-color:white;
+   -fx-text-fill:black;
+   -fx-wrap-text: true;
+   -fx-effect: dropshadow( three-pass-box, #675B52, 10.0, 0.0, 0.0, 0.0);
+   -fx-cursor:hand;
+ }
+
+.dialog-pane #yes:hover{     
+  -fx-background-color:#65C094;
+  -fx-text-fill:black;
+  -fx-font-weight:bold; 
+    -fx-font-family: "Courier New";
+ }
+ 
+.dialog-pane #no {
+   -fx-background-color:white;
+   -fx-text-fill:black;
+   -fx-wrap-text: true;
+   -fx-effect: dropshadow( three-pass-box, #675B52, 10.0, 0.0, 0.0, 0.0);
+   -fx-cursor:hand;
+ }
+
+.dialog-pane #no:hover{     
+  -fx-background-color:#C32D25;
+  -fx-text-fill:black;
+  -fx-font-weight:bold; 
+    -fx-font-family: "Courier New";
+ }
+ 
+ .alert.confirmation.dialog-pane,
+.text-input-dialog.dialog-pane,
+.choice-dialog.dialog-pane {
+    -fx-graphic: url("confirm.png");
+    -fx-border-width:0px;
+   -fx-background-size: 64px 64px;
+}

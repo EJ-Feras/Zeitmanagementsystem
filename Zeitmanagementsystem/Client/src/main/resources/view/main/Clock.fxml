@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import jfxtras.scene.layout.HBox?>
+
+<HBox alignment="CENTER" prefHeight="54.0"  xmlns:fx="http://javafx.com/fxml/1" 
+fx:controller="de.htwsaar.pib.vs.zms.client.controller.mainviewcontroller.ClockController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0">
+         <children>
+            <Text fx:id="time" opacity="0.79" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: &quot;SF UI Text Bold&quot;;" text="00:00" textAlignment="CENTER">
+               <font>
+                  <Font size="32.0" />
+               </font>
+               <effect>
+                  <Glow level="0.0" />
+               </effect>
+            </Text>
+            <HBox prefWidth="45.0">
+               <children>
+                  <Text fx:id="period" opacity="0.79" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: &quot;SF UI Text Bold&quot;;" text="PM">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </children>
+</HBox>

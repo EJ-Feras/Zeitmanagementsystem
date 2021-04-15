@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<DialogPane fx:id="updateEventRoot" expanded="true" minHeight="-Infinity" prefHeight="800.0" prefWidth="850.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.htwsaar.pib.vs.zms.client.controller.eventcontroller.UpdateEventController">
+   <content>
+      <AnchorPane prefHeight="760.0" prefWidth="850.0" style="-fx-background-color: transparent;">
+         <children>
+            <AnchorPane layoutY="-20.0" minHeight="-Infinity" style="-fx-background-color: transparent;" AnchorPane.topAnchor="0.0">
+               <children>
+                  <StackPane layoutY="20.0" prefHeight="600.0" prefWidth="850.0" style="-fx-background-color: transparent;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <AnchorPane style="-fx-border-radius: 5; -fx-background-radius: 5; -fx-background-color: #FFF;">
+                           <effect>
+                              <DropShadow blurType="ONE_PASS_BOX" height="9.08" offsetY="1.0" radius="4.04" width="9.08" />
+                           </effect>
+                           <StackPane.margin>
+                              <Insets left="10.0" />
+                           </StackPane.margin>
+                           <children>
+                              <Label layoutX="22.0" layoutY="20.0" style="-fx-font-family: &quot;SF UI Text Bold&quot;;" text="Update Termin" textFill="#fb2e58" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="20.0">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="titleField" focusColor="#fb2e58" layoutX="25.0" layoutY="82.0" prefHeight="26.0" prefWidth="342.0" promptText="Titel" style="-fx-font-family: &quot;SF UI Text Regular&quot;; -fx-prompt-text-fill: rgb(157, 157, 157, 0.7); -fx-text-fill: #4E4E4E;" unFocusColor="#9d9d9d" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="82.0" />
+                              <JFXDatePicker fx:id="datePicker" defaultColor="#fb2e58" layoutX="25.0" layoutY="134.0" prefHeight="26.0" prefWidth="376.0" promptText="Datum" style="-fx-font-family: &quot;SF UI Text Regular&quot;;" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="128.0" />
+                              <JFXTimePicker fx:id="startTime" defaultColor="#fb2e58" layoutX="25.0" layoutY="193.0" prefHeight="26.0" prefWidth="185.0" promptText="Startzeit" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="174.0" />
+                              <JFXTextField fx:id="duration" focusColor="#fb2e58" prefHeight="26.0" prefWidth="150.0" promptText="duration" style="-fx-font-family: &quot;SF UI Text Regular&quot;; -fx-prompt-text-fill: rgb(157, 157, 157, 0.7); -fx-text-fill: #4E4E4E;" unFocusColor="#9d9d9d" AnchorPane.leftAnchor="215.0" AnchorPane.topAnchor="176.2" />
+                              <JFXTextArea fx:id="notes" focusColor="#fb2e58" layoutX="25.0" layoutY="242.0" prefHeight="90.0" prefWidth="342.0" promptText="Notiz" style="-fx-prompt-text-fill: rgb(157, 157, 157, 0.7); -fx-font-family: &quot;SF UI Text Regular&quot;; -fx-text-fill: black;" unFocusColor="#9d9d9d" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="220.0" />
+                              <JFXComboBox fx:id="repetitionComboBox" focusColor="#fb2e58" layoutX="25.0" layoutY="339.0" prefHeight="26.0" prefWidth="342.0" promptText="Wiederholung" style="-fx-prompt-text-fill: rgb(157, 157, 157, 0.7); -fx-font-family: &quot;SF UI Text Regular&quot;;" unFocusColor="#9c9c9c00" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="330.0" />
+                              <Label layoutX="25.0" layoutY="392.0" style="-fx-font-family: &quot;SF UI Text Bold&quot;;" text="Erinnerungen" textFill="#fb2e58">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <JFXDatePicker fx:id="reminderDate" defaultColor="#fb2e58" layoutX="25.0" layoutY="426.0" prefHeight="26.0" prefWidth="185.0" promptText="Erinnerungstag" style="-fx-font-family: &quot;SF UI Text Regular&quot;; -fx-prompt-text-fill: red; -jfx-unfocus-color: red;" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="430.0" />
+                              <JFXTimePicker fx:id="reminderTime" defaultColor="#fb2e58" layoutX="213.0" layoutY="426.0" prefHeight="26.0" prefWidth="185.0" promptText="Erinnerungszeit" AnchorPane.leftAnchor="215.0" AnchorPane.topAnchor="430.0" />
+                              <JFXComboBox fx:id="choosedRemindersComboBox" focusColor="#fb2e58" layoutX="25.0" layoutY="484.0" prefHeight="26.0" prefWidth="342.0" promptText="Gewählte Erinnerungen" style="-fx-prompt-text-fill: rgb(157, 157, 157, 0.7); -fx-font-family: &quot;SF UI Text Regular&quot;;" unFocusColor="#9c9c9c00" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="475.0" />
+                              <AnchorPane layoutX="105.0" layoutY="529.0" prefHeight="35.0" prefWidth="202.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #FFF;">
+                                 <children>
+                                    <JFXButton fx:id="saveReminderBtn" onAction="#saveReminder" prefHeight="35.0" prefWidth="182.0" style="-fx-background-radius: 30; -fx-border-radius: 30; -fx-font-family: &quot;SF UI Text Regular&quot;; -fx-border-color: #fb2e58;" text="Erinnerung speichern" textFill="#fb2e58" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <Label layoutX="353.0" layoutY="87.0" text="*">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="353.0" layoutY="136.0" text="*">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="162.0" layoutY="182.0" text="*">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="353.0" layoutY="182.0" text="*">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="titleValidation" layoutX="196.0" layoutY="85.0" style="-fx-background-color: #817272; -fx-background-radius: 5; -fx-border-color: #817272; -fx-border-radius: 5;" text="  Geben Sie den Titel an !  " textFill="WHITE" visible="false" />
+                              <Label fx:id="titleValidation1" layoutX="196.0" layoutY="132.0" style="-fx-background-color: #817272; -fx-background-radius: 5; -fx-border-color: #817272; -fx-border-radius: 5;" text="  Geben Sie ein Datum an !  " textFill="WHITE" visible="false" />
+                              <AnchorPane layoutX="152.0" layoutY="204.0">
+                                 <children>
+                                    <Label fx:id="titleValidation11" layoutX="72.0" layoutY="6.0" style="-fx-background-color: #817272; -fx-background-radius: 5; -fx-border-color: #817272; -fx-border-radius: 5;" text=" Die Termindauer fehlt ! " textFill="WHITE" visible="false" />
+                                    <StackPane fx:id="startTimeValidationArrowContainer1" prefHeight="12.0" prefWidth="12.0" AnchorPane.rightAnchor="7.599999999999994" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <Label fx:id="titleValidation111" layoutX="52.0" layoutY="207.0" style="-fx-background-color: #817272; -fx-background-radius: 5; -fx-border-color: #817272; -fx-border-radius: 5;" text=" Die Termindauer fehlt ! " textFill="WHITE" visible="false" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </StackPane>
+                  <StackPane layoutX="430.79998779296875" layoutY="7.0" prefHeight="630.0" prefWidth="430.0" style="-fx-background-color: transparent;" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <AnchorPane style="-fx-border-radius: 5; -fx-background-radius: 5; -fx-background-color: #FB2E58;">
+                           <effect>
+                              <DropShadow height="11.75" offsetX="-1.0" offsetY="1.0" radius="5.4175" width="11.92" />
+                           </effect>
+                           <children>
+                              <StackPane fx:id="closeIconContainer" layoutX="391.0" layoutY="6.0" prefHeight="32.0" prefWidth="38.0" style="-fx-border-radius: 0 5 0 0; -fx-background-radius: 0 5 0 0; -fx-background-color: transparent;" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <JFXButton fx:id="closeButton" contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" onAction="#close" style="-fx-background-color: transparent;" text=" " />
+                                 </children>
+                              </StackPane>
+                              <Label layoutX="23.0" layoutY="32.0" style="-fx-font-family: &quot;SF UI Text Bold&quot;;" text="Einladen" textFill="WHITE" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="32.0">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="search" cacheShape="false" focusColor="#9d9d9d" focusTraversable="false" layoutX="24.0" layoutY="96.0" prefHeight="26.0" prefWidth="106.0" promptText="Suchen" style="-fx-font-family: &quot;SF UI Text Regular&quot;; -fx-prompt-text-fill: rgb(248, 248, 255, 0.7); -fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="96.0" />
+                              <Label layoutX="215.0" layoutY="101.0" style="-fx-font-family: &quot;SF UI Text Regular&quot;;" text="Alle wählen" textFill="WHITE" AnchorPane.rightAnchor="118.59999999999998" AnchorPane.topAnchor="100.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <JFXCheckBox fx:id="selectAllUserCheckBox" ellipsisString=" " graphicTextGap="0.0" layoutX="333.0" layoutY="103.0" text=" " unCheckedColor="WHITE" AnchorPane.rightAnchor="68.79999999999998" AnchorPane.topAnchor="103.0" />
+                              <ScrollPane layoutX="23.0" layoutY="166.0" prefHeight="362.0" prefWidth="386.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="165.0">
+                                 <content>
+                                    <VBox fx:id="availableUsersContainer" alignment="TOP_CENTER" spacing="2.0" />
+                                 </content>
+                              </ScrollPane>
+                              <AnchorPane fx:id="saveBtnContainer" layoutX="114.0" layoutY="539.0" prefHeight="35.0" prefWidth="202.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #FFF;" AnchorPane.bottomAnchor="56.199999999999974">
+                                 <children>
+                                    <JFXButton fx:id="saveBtn" onAction="#saveEvent" prefHeight="35.0" prefWidth="182.0" style="-fx-background-radius: 30; -fx-border-radius: 30; -fx-font-family: &quot;SF UI Text Regular&quot;; -fx-border-color: #FFF; -fx-background-color: #fb2e58;" text="Speichern" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </StackPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </content>
+</DialogPane>

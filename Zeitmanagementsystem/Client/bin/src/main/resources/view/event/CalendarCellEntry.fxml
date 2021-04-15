@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="cellRoot" cacheShape="false" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.htwsaar.pib.vs.zms.client.controller.eventcontroller.CalendarEventCellController">
+   <children>
+      <TextArea fx:id="eventTitle" cacheShape="false" editable="false" prefHeight="18.0" style="-fx-background-color: #863A98; -fx-text-fill: white; -fx-font-family: &quot;SF UI Text Regular&quot;; -fx-background-radius: 5;" text="Title of the event" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<DialogPane fx:id="dialogPane" minHeight="140.0" prefHeight="140.0" prefWidth="367.0" style="-fx-background-color: transparent;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="de.htwsaar.pib.vs.zms.client.controller.DeleteController.DeletionController">
+	<content>
+		<AnchorPane style="-fx-background-color: #AAAAAA; -fx-background-radius: 20 0 20 0; -fx-border-color: white; -fx-border-radius: 20 0 20 0;">
+			<children>
+				<AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+					<children>
+						<HBox AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+							<children>
+								<Label fx:id="msgText" graphicTextGap="0.0" text="No content !" textAlignment="CENTER">
+									<font>
+										<Font name="Noto Mono" size="12.0" />
+									</font>
+									<HBox.margin>
+										<Insets top="25.0" />
+									</HBox.margin>
+								</Label>
+							</children>
+						</HBox>
+						<AnchorPane layoutX="96.0" layoutY="62.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="96.0" AnchorPane.rightAnchor="96.0">
+							<children>
+								<JFXButton id="yes" fx:id="yes" layoutX="8.0" onAction="#delete" prefWidth="70.0" text="Yes">
+									<font>
+										<Font name="Noto Mono" size="12.0" />
+									</font>
+								</JFXButton>
+								<JFXButton id="no" fx:id="no" layoutX="85.0" onAction="#cancel" prefWidth="70.0" text="No">
+									<font>
+										<Font name="Noto Mono" size="12.0" />
+									</font>
+								</JFXButton>
+							</children>
+						</AnchorPane>
+					</children>
+				</AnchorPane>
+			</children>
+		</AnchorPane>
+	</content>
+</DialogPane>
