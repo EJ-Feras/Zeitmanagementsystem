@@ -6,11 +6,11 @@ andere Veranstaltungen zu planen.
 Andere Benutzer können zu Terminen eingeladen werden.
 
 <p>Anmeldung</p>
-<img src ="screenshot/Login.PNG">
+<img src ="screenshots/Login.PNG">
 <p>Kalender</p>
-<img src ="screenshot/Home.PNG">
+<img src ="screenshots/Home.PNG">
 <p>Termin erstellen</p>
-<img src ="screenshot/New Appoint.PNG">
+<img src ="screenshots/New Appoint.PNG">
 
 ## Architektur
 Dieses Projekt wurde in zwei Maven Projekten (Client, Server) mit gemeinsamen Parent-Projekt erstellt.
