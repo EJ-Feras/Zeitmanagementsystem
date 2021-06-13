@@ -5,6 +5,13 @@ Es ermöglicht den Mitarbeitern ihre individuellen Termine zu koordinieren als a
 andere Veranstaltungen zu planen.
 Andere Benutzer können zu Terminen eingeladen werden.
 
+<p>Anmeldung</p>
+<img src ="screenshot/Login.PNG">
+<p>Kalender</p>
+<img src ="screenshot/Home.PNG">
+<p>Termin erstellen</p>
+<img src ="screenshot/New Appoint.PNG">
+
 ## Architektur
 Dieses Projekt wurde in zwei Maven Projekten (Client, Server) mit gemeinsamen Parent-Projekt erstellt.
 Hierbei handelt es sich um eine 3-Schichten-Architektur. Die Trennung zwischen Client und Server erfolgt in der
